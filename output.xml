@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220311 15:31:31.335" rpa="false" schemaversion="2">
+<suite id="s1" name="Demo2 Suite" source="E:\LT_Technology_Services\Robot_Session\Robot_project\robot_suite\demo2_suite.robot">
+<test id="s1-t1" name="TC1">
+<kw name="Get Current Date" library="DateTime">
+<var>${current_date}</var>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20220311 15:31:31.393" level="INFO">${current_date} = 2022-03-11 15:31:31.393</msg>
+<status status="PASS" starttime="20220311 15:31:31.392" endtime="20220311 15:31:31.393"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${currrent_date}</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220311 15:31:31.396" level="FAIL">Variable '${currrent_date}' not found. Did you mean:
+    ${current_date}</msg>
+<status status="FAIL" starttime="20220311 15:31:31.393" endtime="20220311 15:31:31.396"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${current_date}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20220311 15:31:31.397" endtime="20220311 15:31:31.397"/>
+</kw>
+<status status="FAIL" starttime="20220311 15:31:31.392" endtime="20220311 15:31:31.397">Variable '${currrent_date}' not found. Did you mean:
+    ${current_date}</status>
+</test>
+<status status="FAIL" starttime="20220311 15:31:31.339" endtime="20220311 15:31:31.400"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Demo2 Suite">Demo2 Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
