@@ -34,6 +34,9 @@ TC2
     Input Text    id=emgcontacts_relationship    Brother
     Input Text    id=emgcontacts_homePhone    7002811055
     Click Element    id=btnSaveEContact
+    #Validate
+    Table Should Contain    id=emgcontact_list    Anup Basumatary
+    Table Should Contain    id=emgcontact_list    7002811055
 
 
 
