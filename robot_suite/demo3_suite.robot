@@ -19,3 +19,11 @@ TC2
     Remove File    E:${/}Temp${/}My_folder${/}notes.txt
     #remove directory
     Remove Directory    E:${/}Temp${/}My_folder     True
+    
+TC3
+    Create Directory    E:${/}LT_Technology_Services${/}Robot_Session${/}Robot_project${/}new_folder
+   
+TC4
+    Create Directory    ${EXECDIR}${/}new_folder
+    Create File    ${EXECDIR}${/}new_folder${/}file.txt     Anup Basumatary
+    File Should Exist    ${EXECDIR}${/}new_folder${/}file.txt
