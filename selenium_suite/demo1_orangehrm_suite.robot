@@ -28,7 +28,7 @@ TC2
     Click Element    id=btnLogin
     Page Should Contain    My Info
     Click Element    link=My Info
-    Click Element    id=Emergency Contacts
+    Click Element    link=Emergency Contacts
     Click Element    id=btnAddContact
     Input Text    id=emgcontacts_name    Anup Basumatary
     Input Text    id=emgcontacts_relationship    Brother
