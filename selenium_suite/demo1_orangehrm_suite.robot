@@ -27,6 +27,7 @@ TC2
     Input Password    id=txtPassword    admin123
     Click Element    id=btnLogin
     Page Should Contain    My Info
+    Click Element    link=My Info
     Click Element    id=Emergency Contacts
     Click Element    id=btnAddContact
     Input Text    id=emgcontacts_name    Anup Basumatary
