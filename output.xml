@@ -1,65 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220315 15:56:26.508" rpa="false" schemaversion="2">
-<suite id="s1" name="Demo6 Redbus Suite" source="E:\LT_Technology_Services\Robot_Session\Robot_project\selenium_suite\demo6_redbus_suite.robot">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220315 16:39:16.116" rpa="false" schemaversion="2">
+<suite id="s1" name="Demo7 Nasscom Suite" source="E:\LT_Technology_Services\Robot_Session\Robot_project\selenium_suite\demo7_nasscom_suite.robot">
 <test id="s1-t1" name="TC1">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <arg>executable_path=${EXECDIR}${/}driver${/}chromedriver.exe</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220315 15:56:27.025" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220315 15:56:27.024" endtime="20220315 15:56:28.598"/>
+<msg timestamp="20220315 16:39:16.642" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220315 16:39:16.641" endtime="20220315 16:39:18.349"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220315 15:56:28.600" endtime="20220315 15:56:28.769"/>
+<status status="PASS" starttime="20220315 16:39:18.352" endtime="20220315 16:39:18.496"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>20s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220315 15:56:28.769" endtime="20220315 15:56:28.772"/>
+<status status="PASS" starttime="20220315 16:39:18.497" endtime="20220315 16:39:18.500"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
-<arg>url=https://www.redbus.in/</arg>
+<arg>url=https://nasscom.in/nasscom-membership</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220315 15:56:28.774" level="INFO">Opening url 'https://www.redbus.in/'</msg>
-<status status="PASS" starttime="20220315 15:56:28.773" endtime="20220315 15:56:44.867"/>
+<msg timestamp="20220315 16:39:18.501" level="INFO">Opening url 'https://nasscom.in/nasscom-membership'</msg>
+<status status="PASS" starttime="20220315 16:39:18.501" endtime="20220315 16:39:23.839"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>id=signin-block</arg>
+<arg>id=edit-field-membership-type-und-1203</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220315 15:56:44.869" level="INFO">Clicking element 'id=signin-block'.</msg>
-<status status="PASS" starttime="20220315 15:56:44.868" endtime="20220315 15:56:44.976"/>
+<msg timestamp="20220315 16:39:23.841" level="INFO">Clicking element 'id=edit-field-membership-type-und-1203'.</msg>
+<status status="PASS" starttime="20220315 16:39:23.840" endtime="20220315 16:39:23.940"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>id=signInLink</arg>
+<arg>id=edit-field-business-focus-inst-und-970</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220315 15:56:44.978" level="INFO">Clicking element 'id=signInLink'.</msg>
-<status status="PASS" starttime="20220315 15:56:44.977" endtime="20220315 15:56:45.147"/>
+<msg timestamp="20220315 16:39:23.943" level="INFO">Clicking element 'id=edit-field-business-focus-inst-und-970'.</msg>
+<status status="PASS" starttime="20220315 16:39:23.941" endtime="20220315 16:39:24.344"/>
 </kw>
-<kw name="Select Frame" library="SeleniumLibrary">
-<arg>xpath=//iframe[@class='modalIframe']</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20220315 15:56:45.149" level="INFO">Selecting frame 'xpath=//iframe[@class='modalIframe']'.</msg>
-<status status="PASS" starttime="20220315 15:56:45.148" endtime="20220315 15:56:49.597"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=edit-field-business-focus-inst-und-968</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220315 16:39:24.345" level="INFO">Clicking element 'id=edit-field-business-focus-inst-und-968'.</msg>
+<status status="PASS" starttime="20220315 16:39:24.344" endtime="20220315 16:39:24.422"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id=mobileNoInp</arg>
-<arg>78945</arg>
+<arg>id=edit-title</arg>
+<arg>LT</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220315 15:56:49.599" level="INFO">Typing text '78945' into text field 'id=mobileNoInp'.</msg>
-<status status="PASS" starttime="20220315 15:56:49.598" endtime="20220315 15:56:49.907"/>
+<msg timestamp="20220315 16:39:24.424" level="INFO">Typing text 'LT' into text field 'id=edit-title'.</msg>
+<status status="PASS" starttime="20220315 16:39:24.424" endtime="20220315 16:39:24.648"/>
 </kw>
-<kw name="Unselect Frame" library="SeleniumLibrary">
-<doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" starttime="20220315 15:56:49.908" endtime="20220315 15:56:49.911"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=edit-field-address-line-1-und-0-value</arg>
+<arg>20 Chennai</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220315 16:39:24.649" level="INFO">Typing text '20 Chennai' into text field 'id=edit-field-address-line-1-und-0-value'.</msg>
+<status status="PASS" starttime="20220315 16:39:24.649" endtime="20220315 16:39:24.855"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220315 15:56:49.912" endtime="20220315 15:56:52.273"/>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>id=edit-field-state-member-und</arg>
+<arg>Tamil Nadu</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220315 16:39:24.857" level="INFO">Selecting options from selection list 'id=edit-field-state-member-und' by label Tamil Nadu.</msg>
+<status status="PASS" starttime="20220315 16:39:24.857" endtime="20220315 16:39:25.016"/>
 </kw>
-<status status="PASS" starttime="20220315 15:56:27.022" endtime="20220315 15:56:52.275"/>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>id=edit-field-city-membership-und</arg>
+<arg>Chennai</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220315 16:39:25.017" level="INFO">Selecting options from selection list 'id=edit-field-city-membership-und' by label Chennai.</msg>
+<status status="PASS" starttime="20220315 16:39:25.017" endtime="20220315 16:39:25.132"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=edit-field-mode-of-payment-und-1</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220315 16:39:25.134" level="INFO">Clicking element 'id=edit-field-mode-of-payment-und-1'.</msg>
+<status status="PASS" starttime="20220315 16:39:25.133" endtime="20220315 16:39:25.255"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=edit-field-code-of-conduct-und-0</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220315 16:39:25.256" level="INFO">Clicking element 'id=edit-field-code-of-conduct-und-0'.</msg>
+<status status="PASS" starttime="20220315 16:39:25.256" endtime="20220315 16:39:25.422"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=edit-preview</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220315 16:39:25.423" level="INFO">Clicking element 'id=edit-preview'.</msg>
+<status status="PASS" starttime="20220315 16:39:25.423" endtime="20220315 16:39:25.684"/>
+</kw>
+<status status="PASS" starttime="20220315 16:39:16.640" endtime="20220315 16:39:25.686"/>
 </test>
-<status status="PASS" starttime="20220315 15:56:26.511" endtime="20220315 15:56:52.281"/>
+<status status="PASS" starttime="20220315 16:39:16.120" endtime="20220315 16:39:25.691"/>
 </suite>
 <statistics>
 <total>
@@ -68,7 +99,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo6 Redbus Suite">Demo6 Redbus Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo7 Nasscom Suite">Demo7 Nasscom Suite</stat>
 </suite>
 </statistics>
 <errors>
