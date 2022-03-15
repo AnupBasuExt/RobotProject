@@ -16,6 +16,6 @@ TC1
     Input Text    id=getInTouchEmail    anup@gmail.com
     Input Text    id=getInTouchMobile    7002811066
     Input Text    id=getInTouchDesignation    Intern
-    Input Text    id=getInTouchEmpCount    56665
-    Click Button    xpath=//input[@type='submit']
+    Input Text    id=getInTouchEmpCount    100
+    Click Element    xpath=//input[@type='submit']
     Close Window
