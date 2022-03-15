@@ -5,7 +5,7 @@ Library     SeleniumLibrary
 *** Test Cases ***
 
 TC1
-    Comment     Validates whether uses gets error message for mobile number or not
+    Comment     Validates whether uses gets error message for mobile number or not .
     Open Browser    browser=chrome       executable_path=${EXECDIR}${/}driver${/}chromedriver.exe
     Maximize Browser Window
     Set Selenium Implicit Wait    30s
