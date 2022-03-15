@@ -18,7 +18,7 @@ TC1
     Input Text    id=getInTouchMobile    12345
     Input Text    id=getInTouchDesignation    Intern
     Input Text    id=getInTouchEmpCount    100
-    #Click Element    xpath=//button[@type='submit'
+    #Click Element    xpath=//button[@type='submit']
     Click Button    xpath=//button[text()='Get in Touch']
     Element Text Should Be    //div[contains(text(),'digits')]      Mobile Number should be 10 digits
     [Teardown]    Close Browser
