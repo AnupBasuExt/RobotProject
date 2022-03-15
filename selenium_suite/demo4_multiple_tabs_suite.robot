@@ -8,10 +8,11 @@ TC1
     Maximize Browser Window
     Set Selenium Implicit Wait    30s
     Go To    url=https://www.db4free.net/
-    #Page Should Contain    Twitter
     Click Element    partial link=phpMyAdmin
     Switch Window       phpMyAdmin
     Input Text    id=input_username    Admin
     Input Text    id=input_password    admin123
-    Click Element    xpath=//input[@type='submit']
-    Element Should Contain    xpath=//button[@type='submit']    Access denied for user
+    #Click Element    xpath=//input[@type='submit']
+    Click Element    id=input_go
+    #Element Should Contain    xpath=//div[@class='alert alert-danger']    Access denied for user
+    Element Should Contain    xpath=//div[contains(text(),'Access')]    Access denied for user
