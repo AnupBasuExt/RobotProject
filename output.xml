@@ -1,101 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220314 21:53:26.155" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220315 09:30:43.889" rpa="false" schemaversion="2">
 <suite id="s1" name="Demo2 Orangehrm Suite" source="E:\LT_Technology_Services\Robot_Session\Robot_project\selenium_suite\demo2_orangehrm_suite.robot">
 <test id="s1-t1" name="TC1">
 <kw name="Append To Environment Variable" library="OperatingSystem">
 <arg>Path</arg>
 <arg>${EXECDIR}${/}driver${/}</arg>
 <doc>Appends given ``values`` to environment variable ``name``.</doc>
-<msg timestamp="20220314 21:53:26.780" level="INFO">Environment variable 'Path' set to value 'C:\Program Files\Python310\Scripts\;C:\Program Files\Python310\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-12.0.1\bin;C:\Program Files\Java\jdk-16.0.1\bin;C:\Program Files\Java\jre1.8.0_291\bin;C:\Program Files (x86)\Java\jre1.8.0_291\bin;C:\Program Files\dotnet\;C:\Program Files\MEGA11;C:\Program Files\Git\cmd;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;;C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Lenovo\.dotnet\tools;E:\LT_Technology_Services\Robot_Session\Robot_project\driver\'.</msg>
-<status status="PASS" starttime="20220314 21:53:26.780" endtime="20220314 21:53:26.780"/>
+<msg timestamp="20220315 09:30:44.374" level="INFO">Environment variable 'Path' set to value 'C:\Program Files\Python310\Scripts\;C:\Program Files\Python310\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-12.0.1\bin;C:\Program Files\Java\jdk-16.0.1\bin;C:\Program Files\Java\jre1.8.0_291\bin;C:\Program Files (x86)\Java\jre1.8.0_291\bin;C:\Program Files\dotnet\;C:\Program Files\MEGA11;C:\Program Files\Git\cmd;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;;C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Lenovo\.dotnet\tools;E:\LT_Technology_Services\Robot_Session\Robot_project\driver\'.</msg>
+<status status="PASS" starttime="20220315 09:30:44.358" endtime="20220315 09:30:44.374"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>url=https://www.goto.com/meeting/</arg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220314 21:53:26.780" level="INFO">Opening browser 'chrome' to base url 'https://www.goto.com/meeting/'.</msg>
-<status status="PASS" starttime="20220314 21:53:26.780" endtime="20220314 21:53:53.596"/>
+<msg timestamp="20220315 09:30:44.374" level="INFO">Opening browser 'chrome' to base url 'https://www.goto.com/meeting/'.</msg>
+<status status="PASS" starttime="20220315 09:30:44.374" endtime="20220315 09:30:53.579"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220314 21:53:53.597" endtime="20220314 21:53:53.840"/>
+<status status="PASS" starttime="20220315 09:30:53.580" endtime="20220315 09:30:54.241"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>20s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220314 21:53:53.841" endtime="20220314 21:53:53.845"/>
+<status status="PASS" starttime="20220315 09:30:54.241" endtime="20220315 09:30:54.244"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=truste-consent-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220314 21:53:53.847" level="INFO">Clicking button 'id=truste-consent-button'.</msg>
-<status status="PASS" starttime="20220314 21:53:53.846" endtime="20220314 21:53:54.139"/>
+<msg timestamp="20220315 09:30:54.247" level="INFO">Clicking button 'id=truste-consent-button'.</msg>
+<status status="PASS" starttime="20220315 09:30:54.245" endtime="20220315 09:30:54.640"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>link=Try Free</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220314 21:53:54.146" level="INFO">Clicking element 'link=Try Free'.</msg>
-<status status="PASS" starttime="20220314 21:53:54.145" endtime="20220314 21:53:57.519"/>
+<msg timestamp="20220315 09:30:54.676" level="INFO">Clicking element 'link=Try Free'.</msg>
+<msg timestamp="20220315 09:31:14.966" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220315 09:31:14.974" level="FAIL">Element with locator 'link=Try Free' not found.</msg>
+<status status="FAIL" starttime="20220315 09:30:54.675" endtime="20220315 09:31:14.974"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=first-name</arg>
 <arg>John</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220314 21:53:57.521" level="INFO">Typing text 'John' into text field 'id=first-name'.</msg>
-<status status="PASS" starttime="20220314 21:53:57.520" endtime="20220314 21:53:58.100"/>
+<status status="NOT RUN" starttime="20220315 09:31:14.975" endtime="20220315 09:31:14.975"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=last-name</arg>
 <arg>wick</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220314 21:53:58.102" level="INFO">Typing text 'wick' into text field 'id=last-name'.</msg>
-<status status="PASS" starttime="20220314 21:53:58.101" endtime="20220314 21:53:58.481"/>
+<status status="NOT RUN" starttime="20220315 09:31:14.976" endtime="20220315 09:31:14.976"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=login__email</arg>
 <arg>john@gmail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220314 21:53:58.482" level="INFO">Typing text 'john@gmail.com' into text field 'id=login__email'.</msg>
-<status status="PASS" starttime="20220314 21:53:58.481" endtime="20220314 21:53:58.752"/>
+<status status="NOT RUN" starttime="20220315 09:31:14.977" endtime="20220315 09:31:14.977"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=login__password</arg>
 <arg>johnwick123</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220314 21:53:58.763" level="INFO">Typing text 'johnwick123' into text field 'id=login__password'.</msg>
-<status status="PASS" starttime="20220314 21:53:58.762" endtime="20220314 21:53:59.076"/>
+<status status="NOT RUN" starttime="20220315 09:31:14.978" endtime="20220315 09:31:14.978"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id=CompanySize</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220314 21:53:59.078" level="INFO">Clicking element 'id=CompanySize'.</msg>
-<status status="PASS" starttime="20220314 21:53:59.077" endtime="20220314 21:53:59.240"/>
+<status status="NOT RUN" starttime="20220315 09:31:14.978" endtime="20220315 09:31:14.978"/>
 </kw>
 <kw name="Select From List By Value" library="SeleniumLibrary">
 <arg>id=CompanySize</arg>
 <arg>10 - 99</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<msg timestamp="20220314 21:53:59.243" level="INFO">Selecting options from selection list 'id=CompanySize' by value 10 - 99.</msg>
-<status status="PASS" starttime="20220314 21:53:59.241" endtime="20220314 21:53:59.411"/>
+<status status="NOT RUN" starttime="20220315 09:31:14.979" endtime="20220315 09:31:14.979"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath=//*[@id="app"]/section/div[2]/form/section/div/div/div[7]/button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220314 21:53:59.413" level="INFO">Clicking button 'xpath=//*[@id="app"]/section/div[2]/form/section/div/div/div[7]/button'.</msg>
-<status status="PASS" starttime="20220314 21:53:59.412" endtime="20220314 21:53:59.649"/>
+<status status="NOT RUN" starttime="20220315 09:31:14.980" endtime="20220315 09:31:14.980"/>
 </kw>
-<status status="PASS" starttime="20220314 21:53:26.780" endtime="20220314 21:53:59.658"/>
+<status status="FAIL" starttime="20220315 09:30:44.358" endtime="20220315 09:31:14.981">Element with locator 'link=Try Free' not found.</status>
 </test>
-<status status="PASS" starttime="20220314 21:53:26.155" endtime="20220314 21:53:59.662"/>
+<status status="FAIL" starttime="20220315 09:30:43.905" endtime="20220315 09:31:14.985"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo2 Orangehrm Suite">Demo2 Orangehrm Suite</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Demo2 Orangehrm Suite">Demo2 Orangehrm Suite</stat>
 </suite>
 </statistics>
 <errors>
