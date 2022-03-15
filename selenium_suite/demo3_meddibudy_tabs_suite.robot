@@ -17,5 +17,6 @@ TC1
     Input Text    id=getInTouchMobile    7002811066
     Input Text    id=getInTouchDesignation    Intern
     Input Text    id=getInTouchEmpCount    100
+    #Click Element    xpath=//button[@type='submit'
     Click Button    xpath=//button[text()='Get in Touch']
     Close Window
