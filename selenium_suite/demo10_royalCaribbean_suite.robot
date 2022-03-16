@@ -25,6 +25,7 @@ TC1 Sign Up
     Click Element    xpath=//span[text()='Month']
     Click Element    xpath=//span[contains(text(),'April')]
     Click Element    xpath=//span[text()='Day']
+    #Scroll Element Into View    xpath=//span[contains(text(),'26')] use if the number is not selected,can use greater number than click element
     Click Element    xpath=//span[contains(text(),'4')]
     Input Text    xpath=//input[@data-placeholder='Year']    1992
     Click Element    xpath=//span[text()='Country/Region of residence']
