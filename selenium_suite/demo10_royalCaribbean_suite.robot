@@ -27,8 +27,10 @@ TC1 Sign Up
     Set Selenium Speed    1s
     Go To    url=https://www.royalcaribbean.com/account/
     Click Element    xpath=//a[normalize-space()='Create an account']
+
     Input Text    xpath=//input[@data-placeholder='First name/Given name']    Anup
     Input Text    xpath=//input[@data-placeholder='Last name/Surname']    Basu
+
     Click Element    xpath=//span[text()='Month']
     Click Element    xpath=//span[contains(text(),'April')]
     Click Element    xpath=//span[text()='Day']
@@ -41,10 +43,13 @@ TC1 Sign Up
 
     Input Text    xpath=//input[@data-placeholder='Email address']    anup@gmail.com
     Click Element    xpath=//span[text()='Select one security question']
+
     Click Element    xpath=//span[contains(text(),'What elementary school did you go to?')]
     Input Text    xpath=//input[@data-placeholder='Answer']    MMVM
-    Click Element    xpath=//span[@class='mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin']
+    
+    #Click Element    xpath=//span[@class='mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin']
+    Click Element    xpath=//input[@type='checkbox']/..
     Click Element    xpath=//button[normalize-space()='Done']
 
     #Validate
-    Element Text Should Be    xpath=//span[normalize-space()='Password is required.']    Password is required.
+    Element Text Should Be    xpath=//span[contains(text(),'Password')]    Password is required.
