@@ -39,3 +39,4 @@ TC1 Sign Up
     Click Element    xpath=//span[contains(text(),'What elementary school did you go to?')]
     Input Text    xpath=//input[@data-placeholder='Answer']    MMVM
     Click Element    xpath=//span[@class='mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin']
+    Click Element    xpath=//button[normalize-space()='Done']
