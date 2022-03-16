@@ -26,3 +26,6 @@ TC1 Sign Up
     Click Element    xpath=//span[text()='Day']
     Click Element    xpath=//span[contains(text(),'4')]
     Input Text    xpath=//input[@data-placeholder='Year']    1992
+    
+    Click Element    xpath=//span[text()='Country/Region of residence']
+    Click Element    xpath=//span[contains(text(),'India')]
