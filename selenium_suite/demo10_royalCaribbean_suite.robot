@@ -6,6 +6,10 @@
 5. Month as April
 6. Day as 4
 7. year as 1992
+8.choose-country-India
+9.Security Question - which elementary school do yo go to?
+10.Answer
+11.Click checkbox
 
 *** Settings ***
 Library     SeleniumLibrary
@@ -30,3 +34,8 @@ TC1 Sign Up
     Input Text    xpath=//input[@data-placeholder='Year']    1992
     Click Element    xpath=//span[text()='Country/Region of residence']
     Click Element    xpath=//span[contains(text(),'India')]
+    Input Text    xpath=//input[@data-placeholder='Email address']    anup@gmail.com
+    Click Element    xpath=//span[text()='Select one security question']
+    Click Element    xpath=//span[contains(text(),'What elementary school did you go to?')]
+    Input Text    xpath=//input[@data-placeholder='Answer']    MMVM
+    Click Element    xpath=//span[@class='mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin']
