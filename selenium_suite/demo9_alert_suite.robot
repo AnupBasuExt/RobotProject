@@ -14,6 +14,7 @@ TC1
     ${alert_text}    Handle Alert        action=ACCEPT   timeout=50s
     Log To Console    ${alert_text}
 
+
 TC2
     Open Browser    browser=chrome     executable_path=${EXECDIR}${/}driver${/}chromedriver.exe
     Maximize Browser Window
@@ -22,3 +23,6 @@ TC2
     Click Element    xpath=//a[@id='edit-submitted-contact-person-for-nasscom-email-id-cp']
     ${alert}    Handle Alert    action=ACCEPT   timeout=20s
     Log To Console    ${alert}
+
+    #Validation
+    Should Be Equal    ${alert}    Please enter amount in digit and greater than zero.
