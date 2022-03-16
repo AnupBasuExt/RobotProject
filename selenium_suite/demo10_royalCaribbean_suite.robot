@@ -7,9 +7,12 @@
 6. Day as 4
 7. year as 1992
 8.choose-country-India
-9.Security Question - which elementary school do yo go to?
-10.Answer
-11.Click checkbox
+9.email
+10.Security Question - which elementary school do yo go to?
+11.Answer
+12.Click checkbox
+13.Click Done
+14.Validate password required text
 
 *** Settings ***
 Library     SeleniumLibrary
@@ -40,3 +43,6 @@ TC1 Sign Up
     Input Text    xpath=//input[@data-placeholder='Answer']    MMVM
     Click Element    xpath=//span[@class='mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin']
     Click Element    xpath=//button[normalize-space()='Done']
+
+    #Validate
+    Element Text Should Be    xpath=//span[normalize-space()='Password is required.']    Password is required.
