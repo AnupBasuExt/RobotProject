@@ -35,8 +35,10 @@ TC1 Sign Up
     #Scroll Element Into View    xpath=//span[contains(text(),'26')] use if the number is not selected,can use greater number than click element
     Click Element    xpath=//span[contains(text(),'4')]
     Input Text    xpath=//input[@data-placeholder='Year']    1992
+
     Click Element    xpath=//span[text()='Country/Region of residence']
-    Click Element    xpath=//span[contains(text(),'India')]
+    Click Element    xpath=//span[contains(text(),'India')][2]
+
     Input Text    xpath=//input[@data-placeholder='Email address']    anup@gmail.com
     Click Element    xpath=//span[text()='Select one security question']
     Click Element    xpath=//span[contains(text(),'What elementary school did you go to?')]
