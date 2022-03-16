@@ -26,7 +26,7 @@ TC1 Sign Up
     Set Selenium Implicit Wait    20s
     Set Selenium Speed    1s
     Go To    url=https://www.royalcaribbean.com/account/
-    Click Element    link=Create an account
+    Click Element    xpath=//a[normalize-space()='Create an account']
     Input Text    xpath=//input[@data-placeholder='First name/Given name']    Anup
     Input Text    xpath=//input[@data-placeholder='Last name/Surname']    Basu
     Click Element    xpath=//span[text()='Month']
@@ -37,7 +37,7 @@ TC1 Sign Up
     Input Text    xpath=//input[@data-placeholder='Year']    1992
 
     Click Element    xpath=//span[text()='Country/Region of residence']
-    Click Element    xpath=//span[contains(text(),'India')][2]
+    Click Element    xpath=//span[contains(text(),'India')]
 
     Input Text    xpath=//input[@data-placeholder='Email address']    anup@gmail.com
     Click Element    xpath=//span[text()='Select one security question']
