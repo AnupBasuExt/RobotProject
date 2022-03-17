@@ -17,8 +17,8 @@ TC1
         Select From List By Value    id=flight_type     business
 
         Input Text    xpath=//input[@placeholder="Flying From"]    Los Angeles
-        Mouse Over    xpath=//strong[text()=' Los Angeles Intl']
-        Click Element    xpath=//strong[text()=' Los Angeles Intl']
+        Mouse Over    xpath=//b[text()='LAX']
+        Click Element    xpath=//b[text()='LAX']
 
         Input Text    xpath=//input[@placeholder="To Destination"]    Dallas
         Mouse Over    xpath=//b[text()='DAL']
@@ -35,4 +35,8 @@ TC1
         Input Text    id=fchilds    2
 
         Click Element    xpath=//button[@id='flights-search']
+        
+        Element Should Contain    xpath=//div[@class='section-heading']    LAX
+        Element Should Contain    xpath=//div[@class='section-heading']    DAL
+        Element Should Contain    xpath=//div[@class='section-heading']    30-12-2022
 
