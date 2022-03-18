@@ -17,20 +17,16 @@ TC1
         Select From List By Value    id=flight_type     business
 
         Input Text    xpath=//input[@placeholder="Flying From"]    Los Angeles
-        Mouse Over    xpath=//b[text()='LAX']
         Click Element    xpath=//b[text()='LAX']
 
         Input Text    xpath=//input[@placeholder="To Destination"]    Dallas
-        Mouse Over    xpath=//b[text()='DAL']
         Click Element    xpath=//b[text()='DAL']
         Input Text    id=departure    30-12-2022
         
         Click Element    xpath=//a[@data-toggle='dropdown']
-        Mouse Over    xpath=//input[@id='fadults']
         Click Element    xpath=//input[@id='fadults']
         Input Text    id=fadults    4
 
-        Mouse Over    xpath=//input[@id='fchilds']
         Click Element    xpath=//input[@id='fchilds']
         Input Text    id=fchilds    2
 
