@@ -1,156 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220318 17:58:41.361" rpa="false" schemaversion="2">
-<suite id="s1" name="Demo12 Phptravels Suite" source="E:\LT_Technology_Services\Robot_Session\Robot_project\selenium_suite\demo12_phptravels_suite.robot">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220318 18:02:13.408" rpa="false" schemaversion="2">
+<suite id="s1" name="Demo1 Suite" source="E:\LT_Technology_Services\Robot_Session\Robot_project\db_suite\demo1_suite.robot">
+<kw name="Connect To Database" library="DatabaseLibrary" type="SETUP">
+<arg>dbapiModuleName=pymysql</arg>
+<arg>dbName=dbfree_db</arg>
+<arg>dbUsername=dbfree_db</arg>
+<arg>dbPassword=12345678</arg>
+<arg>dbHost=db4free.net</arg>
+<arg>dbPort=3306</arg>
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
+connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
+<msg timestamp="20220318 18:02:13.565" level="INFO">Connecting using : pymysql.connect(db=dbfree_db, user=dbfree_db, passwd=12345678, host=db4free.net, port=3306, charset=None) </msg>
+<status status="PASS" starttime="20220318 18:02:13.486" endtime="20220318 18:02:25.627"/>
+</kw>
 <test id="s1-t1" name="TC1">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=chrome</arg>
-<arg>executable_path=${EXECDIR}${/}Driver${/}chromedriver.exe</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220318 17:58:41.814" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220318 17:58:41.814" endtime="20220318 17:58:44.218"/>
+<kw name="Table Must Exist" library="DatabaseLibrary">
+<arg>Products</arg>
+<doc>Check if the table given exists in the database. Set optional input `sansTran` to True to run command without an
+explicit transaction commit or rollback.</doc>
+<msg timestamp="20220318 18:02:25.643" level="INFO">Executing : Table Must Exist  |  Products </msg>
+<msg timestamp="20220318 18:02:25.643" level="INFO">Executing : Row Count  |  SELECT * FROM information_schema.tables WHERE table_name='Products' </msg>
+<status status="PASS" starttime="20220318 18:02:25.643" endtime="20220318 18:02:28.096"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220318 17:58:44.232" endtime="20220318 17:58:44.438"/>
+<kw name="Row Count" library="DatabaseLibrary">
+<var>${count}</var>
+<arg>select * from Products</arg>
+<doc>Uses the input `selectStatement` to query the database and returns the number of rows from the query. Set
+optional input `sansTran` to True to run command without an explicit transaction commit or rollback.</doc>
+<msg timestamp="20220318 18:02:28.096" level="INFO">Executing : Row Count  |  select * from Products </msg>
+<msg timestamp="20220318 18:02:28.580" level="INFO">${count} = 81</msg>
+<status status="PASS" starttime="20220318 18:02:28.096" endtime="20220318 18:02:28.580"/>
 </kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>20s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220318 17:58:44.438" endtime="20220318 17:58:44.441"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220318 18:02:28.580" endtime="20220318 18:02:28.580"/>
 </kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>url=https://phptravels.net/</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220318 17:58:44.442" level="INFO">Opening url 'https://phptravels.net/'</msg>
-<status status="PASS" starttime="20220318 17:58:44.442" endtime="20220318 17:58:50.086"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=cookie_stop</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220318 17:58:50.088" level="INFO">Clicking element 'id=cookie_stop'.</msg>
-<status status="PASS" starttime="20220318 17:58:50.087" endtime="20220318 17:58:50.263"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//a[contains(text(),'flights')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220318 17:58:50.264" level="INFO">Clicking element 'xpath=//a[contains(text(),'flights')]'.</msg>
-<status status="PASS" starttime="20220318 17:58:50.263" endtime="20220318 17:58:52.066"/>
-</kw>
-<kw name="Select From List By Value" library="SeleniumLibrary">
-<arg>id=flight_type</arg>
-<arg>business</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<msg timestamp="20220318 17:58:52.068" level="INFO">Selecting options from selection list 'id=flight_type' by value business.</msg>
-<status status="PASS" starttime="20220318 17:58:52.067" endtime="20220318 17:58:52.300"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath=//input[@placeholder="Flying From"]</arg>
-<arg>Los Angeles</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220318 17:58:52.302" level="INFO">Typing text 'Los Angeles' into text field 'xpath=//input[@placeholder="Flying From"]'.</msg>
-<status status="PASS" starttime="20220318 17:58:52.301" endtime="20220318 17:58:54.195"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//b[text()='LAX']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220318 17:58:54.200" level="INFO">Clicking element 'xpath=//b[text()='LAX']'.</msg>
-<status status="PASS" starttime="20220318 17:58:54.199" endtime="20220318 17:58:54.349"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath=//input[@placeholder="To Destination"]</arg>
-<arg>Dallas</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220318 17:58:54.353" level="INFO">Typing text 'Dallas' into text field 'xpath=//input[@placeholder="To Destination"]'.</msg>
-<status status="PASS" starttime="20220318 17:58:54.352" endtime="20220318 17:58:54.938"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//b[text()='DAL']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220318 17:58:54.940" level="INFO">Clicking element 'xpath=//b[text()='DAL']'.</msg>
-<status status="PASS" starttime="20220318 17:58:54.939" endtime="20220318 17:58:55.040"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=departure</arg>
-<arg>30-12-2022</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220318 17:58:55.042" level="INFO">Typing text '30-12-2022' into text field 'id=departure'.</msg>
-<status status="PASS" starttime="20220318 17:58:55.041" endtime="20220318 17:58:55.398"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//a[@data-toggle='dropdown']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220318 17:58:55.399" level="INFO">Clicking element 'xpath=//a[@data-toggle='dropdown']'.</msg>
-<status status="PASS" starttime="20220318 17:58:55.399" endtime="20220318 17:58:55.514"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//input[@id='fadults']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220318 17:58:55.516" level="INFO">Clicking element 'xpath=//input[@id='fadults']'.</msg>
-<status status="PASS" starttime="20220318 17:58:55.515" endtime="20220318 17:58:55.726"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=fadults</arg>
-<arg>4</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220318 17:58:55.727" level="INFO">Typing text '4' into text field 'id=fadults'.</msg>
-<status status="PASS" starttime="20220318 17:58:55.727" endtime="20220318 17:58:55.930"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//input[@id='fchilds']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220318 17:58:55.931" level="INFO">Clicking element 'xpath=//input[@id='fchilds']'.</msg>
-<status status="PASS" starttime="20220318 17:58:55.931" endtime="20220318 17:58:56.064"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=fchilds</arg>
-<arg>2</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220318 17:58:56.065" level="INFO">Typing text '2' into text field 'id=fchilds'.</msg>
-<status status="PASS" starttime="20220318 17:58:56.065" endtime="20220318 17:58:56.242"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//button[@id='flights-search']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220318 17:58:56.244" level="INFO">Clicking element 'xpath=//button[@id='flights-search']'.</msg>
-<status status="PASS" starttime="20220318 17:58:56.244" endtime="20220318 17:59:03.696"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>xpath=//div[@class='section-heading']</arg>
-<arg>LAX</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220318 17:59:03.758" level="INFO">Element 'xpath=//div[@class='section-heading']' contains text 'LAX'.</msg>
-<status status="PASS" starttime="20220318 17:59:03.696" endtime="20220318 17:59:03.758"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>xpath=//div[@class='section-heading']</arg>
-<arg>DAL</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220318 17:59:03.794" level="INFO">Element 'xpath=//div[@class='section-heading']' contains text 'DAL'.</msg>
-<status status="PASS" starttime="20220318 17:59:03.759" endtime="20220318 17:59:03.795"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>xpath=//div[@class='section-heading']</arg>
-<arg>30-12-2022</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220318 17:59:03.829" level="INFO">Element 'xpath=//div[@class='section-heading']' contains text '30-12-2022'.</msg>
-<status status="PASS" starttime="20220318 17:59:03.795" endtime="20220318 17:59:03.829"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220318 17:59:03.830" endtime="20220318 17:59:06.113"/>
-</kw>
-<status status="PASS" starttime="20220318 17:58:41.814" endtime="20220318 17:59:06.113"/>
+<status status="PASS" starttime="20220318 18:02:25.627" endtime="20220318 18:02:28.580"/>
 </test>
-<status status="PASS" starttime="20220318 17:58:41.361" endtime="20220318 17:59:06.113"/>
+<test id="s1-t2" name="TC2">
+<kw name="Row Count Is Equal To X" library="DatabaseLibrary">
+<arg>select * from Products where product_id=10</arg>
+<arg>1</arg>
+<doc>Check if the number of rows returned from `selectStatement` is equal to the value submitted. If not, then this
+will throw an AssertionError. Set optional input `sansTran` to True to run command without an explicit
+transaction commit or rollback.</doc>
+<msg timestamp="20220318 18:02:28.596" level="INFO">Executing : Row Count Is Equal To X  |  select * from Products where product_id=10  |  1 </msg>
+<msg timestamp="20220318 18:02:28.596" level="INFO">Executing : Row Count  |  select * from Products where product_id=10 </msg>
+<status status="PASS" starttime="20220318 18:02:28.596" endtime="20220318 18:02:29.040"/>
+</kw>
+<status status="PASS" starttime="20220318 18:02:28.596" endtime="20220318 18:02:29.040"/>
+</test>
+<test id="s1-t3" name="TC3">
+<kw name="Execute Sql String" library="DatabaseLibrary">
+<arg>Insert into Products(product_id,productname,description) values (717,'Anup','my name')</arg>
+<doc>Executes the sqlString as SQL commands. Useful to pass arguments to your sql. Set optional input `sansTran` to
+True to run command without an explicit transaction commit or rollback.</doc>
+<msg timestamp="20220318 18:02:29.055" level="INFO">Executing : Execute SQL String  |  Insert into Products(product_id,productname,description) values (717,'Anup','my name') </msg>
+<status status="PASS" starttime="20220318 18:02:29.040" endtime="20220318 18:02:30.290"/>
+</kw>
+<kw name="Row Count Is Equal To X" library="DatabaseLibrary">
+<arg>select * from Products where product_id=717</arg>
+<arg>1</arg>
+<doc>Check if the number of rows returned from `selectStatement` is equal to the value submitted. If not, then this
+will throw an AssertionError. Set optional input `sansTran` to True to run command without an explicit
+transaction commit or rollback.</doc>
+<msg timestamp="20220318 18:02:30.292" level="INFO">Executing : Row Count Is Equal To X  |  select * from Products where product_id=717  |  1 </msg>
+<msg timestamp="20220318 18:02:30.292" level="INFO">Executing : Row Count  |  select * from Products where product_id=717 </msg>
+<status status="PASS" starttime="20220318 18:02:30.291" endtime="20220318 18:02:30.664"/>
+</kw>
+<status status="PASS" starttime="20220318 18:02:29.040" endtime="20220318 18:02:30.666"/>
+</test>
+<test id="s1-t4" name="TC4">
+<kw name="Query" library="DatabaseLibrary">
+<var>${query_list}</var>
+<arg>Select * from Products</arg>
+<doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
+input `sansTran` to True to run command without an explicit transaction commit or rollback.
+Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
+<msg timestamp="20220318 18:02:30.674" level="INFO">Executing : Query  |  Select * from Products </msg>
+<msg timestamp="20220318 18:02:31.132" level="INFO">${query_list} = ((1, 'Basu', 'ji'), (10, 'Basu', '7 plus 128 Gb'), (11, 'Basu', 'mayank'), (13, 'Basu', 'xxx'), (23, 'Basu', 'justname'), (42, 'Basu', 'isha'), (50, 'apsar', 'justname'), (51, 'apsar', 'justname'), (6...</msg>
+<status status="PASS" starttime="20220318 18:02:30.673" endtime="20220318 18:02:31.132"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${query_list}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220318 18:02:31.132" endtime="20220318 18:02:31.132"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${query_list}[0]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220318 18:02:31.132" endtime="20220318 18:02:31.148"/>
+</kw>
+<status status="PASS" starttime="20220318 18:02:30.671" endtime="20220318 18:02:31.148"/>
+</test>
+<test id="s1-t5" name="TC5">
+<kw name="Execute Sql String" library="DatabaseLibrary">
+<arg>update Products set productname='Basu' where product_id=717</arg>
+<doc>Executes the sqlString as SQL commands. Useful to pass arguments to your sql. Set optional input `sansTran` to
+True to run command without an explicit transaction commit or rollback.</doc>
+<msg timestamp="20220318 18:02:31.148" level="INFO">Executing : Execute SQL String  |  update Products set productname='Basu' where product_id=717 </msg>
+<status status="PASS" starttime="20220318 18:02:31.148" endtime="20220318 18:02:31.960"/>
+</kw>
+<kw name="Query" library="DatabaseLibrary">
+<var>${output}</var>
+<arg>select * from Products where product_id=717</arg>
+<doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
+input `sansTran` to True to run command without an explicit transaction commit or rollback.
+Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
+<msg timestamp="20220318 18:02:31.976" level="INFO">Executing : Query  |  select * from Products where product_id=717 </msg>
+<msg timestamp="20220318 18:02:32.346" level="INFO">${output} = ((717, 'Basu', 'my name'),)</msg>
+<status status="PASS" starttime="20220318 18:02:31.976" endtime="20220318 18:02:32.346"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${output}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220318 18:02:32.346" endtime="20220318 18:02:32.346"/>
+</kw>
+<status status="PASS" starttime="20220318 18:02:31.148" endtime="20220318 18:02:32.346"/>
+</test>
+<test id="s1-t6" name="TC6">
+<kw name="Query" library="DatabaseLibrary">
+<var>@{output}</var>
+<arg>select * from Products where product_id=717</arg>
+<doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
+input `sansTran` to True to run command without an explicit transaction commit or rollback.
+Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
+<msg timestamp="20220318 18:02:32.362" level="INFO">Executing : Query  |  select * from Products where product_id=717 </msg>
+<msg timestamp="20220318 18:02:32.819" level="INFO">@{output} = [ (717, 'Basu', 'my name') ]</msg>
+<status status="PASS" starttime="20220318 18:02:32.362" endtime="20220318 18:02:32.820"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${output}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220318 18:02:32.821" endtime="20220318 18:02:32.822"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${output}[0]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220318 18:02:32.824" endtime="20220318 18:02:32.826"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${output}[0][1]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220318 18:02:32.827" endtime="20220318 18:02:32.829"/>
+</kw>
+<status status="PASS" starttime="20220318 18:02:32.362" endtime="20220318 18:02:32.830"/>
+</test>
+<kw name="Disconnect From Database" library="DatabaseLibrary" type="TEARDOWN">
+<doc>Disconnects from the database.</doc>
+<msg timestamp="20220318 18:02:32.836" level="INFO">Executing : Disconnect From Database</msg>
+<status status="PASS" starttime="20220318 18:02:32.835" endtime="20220318 18:02:32.836"/>
+</kw>
+<status status="PASS" starttime="20220318 18:02:13.424" endtime="20220318 18:02:32.837"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo12 Phptravels Suite">Demo12 Phptravels Suite</stat>
+<stat pass="6" fail="0" skip="0" id="s1" name="Demo1 Suite">Demo1 Suite</stat>
 </suite>
 </statistics>
 <errors>
