@@ -10,7 +10,6 @@ TC1
         Open Browser    browser=chrome      executable_path=${EXECDIR}${/}Driver${/}chromedriver.exe
         Maximize Browser Window
         Set Selenium Implicit Wait    20s
-        #Go To    url=https://softwaretesting.com/
         Go To    url=https://john:john123@softwaretesting.com
 
 TC2
