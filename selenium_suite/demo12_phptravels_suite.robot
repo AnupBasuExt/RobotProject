@@ -10,7 +10,7 @@ TC1
         Open Browser    browser=chrome      executable_path=${EXECDIR}${/}Driver${/}chromedriver.exe
         Maximize Browser Window
         Set Selenium Implicit Wait    20s
-        Go To    https://phptravels.net/
+        Go To    url=https://phptravels.net/
 
         Click Element    id=cookie_stop
         Click Element    xpath=//a[contains(text(),'flights')]
