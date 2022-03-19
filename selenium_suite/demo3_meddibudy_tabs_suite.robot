@@ -10,7 +10,8 @@ TC1
     Maximize Browser Window
     Set Selenium Implicit Wait    30s
     Go To    url=https://www.medibuddy.in/
-    Click Element    xpath=//button[text()='Not Now']
+    Run Keyword And Ignore Error    Click Element    xpath=//*[text()='hello'      
+    Run Keyword And Ignore Error    Click Element    xpath=//button[text()='Not Now']  
     Click Element    link=For Employer
     Switch Window       MediBuddy LaunchPad
     Input Text    id=getInTouchName    Anup
